@@ -132,7 +132,7 @@ server.post('/chat/messages/get/recent', (req,res,next) => {
 			m1 = m1.slice(Math.max(m1.length - 10, 1))
 			m2 = m2.slice(Math.max(m2.length - 10, 1))
 			messages = [...m1,...m2];
-			messages.sort((a,b)=>(b.time < a.time));
+			messages.sort((a,b)=>(a.time - b.time));
 		}else{
 			messages = [];
 		}
@@ -158,7 +158,7 @@ server.post('/chat/messages/get/after', (req,res,next) => {
 			m1 = m1.filter(ob=>{return ob.time > pointInTime});
 			m2 = m2.filter(ob=>{return ob.time > pointInTime});
 			messages = [...m1,...m2];
-			messages.sort((a,b)=>(b.time < a.time));
+			messages.sort((a,b)=>(a.time - b.time));
 		}else{
 			messages = [];
 		}
@@ -210,7 +210,7 @@ server.post('/chat/messages/get/last', (req,res,next) => {
 			var m1 = JSON.parse(fs.readFileSync(ACCOUNTS+user+'/messages/'+otherUser+'/chat.json'));
 			var m2 = JSON.parse(fs.readFileSync(ACCOUNTS+otherUser+'/messages/'+user+'/chat.json'));
 			messages = [...m1,...m2];
-			messages.sort((a,b)=>(b.time < a.time));
+			messages.sort((a,b)=>(a.time - b.time));
 			messages = messages[messages.length - 1];
 		}else{
 			messages = [];

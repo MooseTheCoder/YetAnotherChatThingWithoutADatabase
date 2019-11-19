@@ -1,0 +1,18 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "jwt-simple": "^0.5.6",
+    "md5": "^2.2.1",
+    "restify": "^8.4.0",
+    "restify-cors-middleware": "^1.1.1"
+  }
+}

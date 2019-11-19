@@ -1,0 +1,4 @@
+Server/data/accounts/*
+Server/data/images/*
+Server/node_modules
+client/node_modules

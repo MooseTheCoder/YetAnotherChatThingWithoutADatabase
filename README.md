@@ -12,6 +12,11 @@ Security was not a concern when making this, I'm pretty sure there is some path 
 
 There is no error handling, the server will crash if you ask it to do something it cant, do eg asking for a user profile that does not exist.
 
+### Before starting the sever you will need to add the following folders
+
+- data
+- data->accounts
+- data->images
 
 
 ## Features
